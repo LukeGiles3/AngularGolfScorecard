@@ -1,1 +1,64 @@
-<p>welcome-page-component works!</p>
+<div class="center">
+
+  <div>
+    <h1>Angular Golf Scorecard</h1>
+    <h3>Select a course and a tee-type then provide player names</h3>
+  </div>
+
+  <div>
+    <h4>Which course?</h4>
+      <mat-form-field appearance="fill">
+      <mat-label>Select Course</mat-label>
+        <mat-select>
+          <mat-option>
+            course 1
+          </mat-option>
+          <mat-option>
+            course 2
+          </mat-option>
+          <mat-option>
+            course 3
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <h4>Which tee?</h4>
+      <mat-form-field appearance="fill">
+      <mat-label>Select Tee</mat-label>
+        <mat-select>
+          <mat-option>
+            pro
+          </mat-option>
+          <mat-option>
+            amateur
+          </mat-option>
+          <mat-option>
+            rookie
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <h4>How many players? <br>(if you are playing with less than 4 people, just leave it blank!)</h4>
+      <form>
+        <mat-form-field >
+          <mat-label>Player 1</mat-label>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Player 2</mat-label>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Player 3</mat-label>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Player 4</mat-label>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+      </form>
+  </div>
+
+</div>
+
