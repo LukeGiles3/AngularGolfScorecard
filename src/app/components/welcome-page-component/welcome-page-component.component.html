@@ -5,6 +5,13 @@
     <h3>Select a course and a tee-type then provide player names</h3>
   </div>
 
+  <div *ngIf="course">
+    <h1>{{ course.name }}</h1>
+    <h2>{{ errorMessage }}</h2>
+    <h3>{{ course.id }}</h3>
+  </div>
+
+
   <div>
     <h4>Which course?</h4>
       <mat-form-field appearance="fill">
