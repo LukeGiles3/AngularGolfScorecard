@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { WelcomePageComponentComponent } from '../components/welcome-page-component/welcome-page-component.component';
 import { GameOnPageComponentComponent } from '../components/game-on-page-component/game-on-page-component.component';
+import { WelcomePageFormComponent } from './../components/welcome-page-form/welcome-page-form.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'welcomePage', pathMatch: 'full'},
-  {path: 'welcomePage', component: WelcomePageComponentComponent},
+  {path: 'welcomePage', component: WelcomePageFormComponent},
   {path: 'gameOnPage', component: GameOnPageComponentComponent}
 ];
 

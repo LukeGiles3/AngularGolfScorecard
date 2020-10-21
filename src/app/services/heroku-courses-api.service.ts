@@ -22,14 +22,14 @@ export class HerokuCoursesAPIService {
     );
   }
 
-  getSpecificCourse(id): Observable<any> {
-    const url = `http://golf-courses-api.herokuapp.com/courses/${id}`;
-    return this.http.get(url).pipe(
-      catchError(this.handleError),
-      // tslint:disable-next-line: no-string-literal
-      map(data => data['data'])
-    );
-  }
+  // getSpecificCourse(id): Observable<any> {
+  //   const url = `http://golf-courses-api.herokuapp.com/courses/${id}`;
+  //   return this.http.get(url).pipe(
+  //     catchError(this.handleError),
+  //     // tslint:disable-next-line: no-string-literal
+  //     map(data => data['data'])
+  //   );
+  // }
 
   // tslint:disable-next-line: typedef
   handleError(error: HttpErrorResponse) {
