@@ -1,4 +1,4 @@
-import { Courses } from './../../course';
+import { Courses } from '../../interfaces/course';
 import { HerokuCoursesAPIService } from './../../services/heroku-courses-api.service';
 import { Component, OnInit, Injectable } from '@angular/core';
 
@@ -14,6 +14,7 @@ export class WelcomePageComponentComponent implements OnInit {
 
   course: Courses;
   errorMessage: string;
+  courseId: number;
 
   constructor(private courseService: HerokuCoursesAPIService) { }
 
