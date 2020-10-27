@@ -2,11 +2,11 @@
 
   <div>
     <h1>Angular Golf Scorecard</h1>
-    <h3>Select a course and a tee-type then provide player names</h3>
+    <h3>Select a course and start playing!</h3>
   </div>
 
   <div>
-    <form [formGroup]='form' #courseForm = 'ngForm' (ngSubmit)="onSubmit(courseForm.value)" >
+    <form [formGroup]='form' #courseForm = 'ngForm' (ngSubmit)="getCourseById(courseForm.value.id)" >
     <h4>Which course?</h4>
       <mat-form-field appearance="fill">
       <mat-label>Select Course</mat-label>
@@ -16,48 +16,10 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <h4>Which tee?</h4>
-      <mat-form-field appearance="fill">
-      <mat-label>Select Tee</mat-label>
-        <mat-select formControlName='teeBox'>
-          <mat-option value='pro'>
-            Pro
-          </mat-option>
-          <mat-option value='champion'>
-            Champion
-          </mat-option>
-          <mat-option value='men'>
-            Men
-          </mat-option>
-          <mat-option value='women'>
-            Women
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <h4>How many players? <br>(if you are playing with less than 4 people, just leave it blank!)</h4>
-        <mat-form-field >
-          <mat-label>Player 1</mat-label>
-          <input matInput placeholder="Name" formControlName='player1'>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Player 2</mat-label>
-          <input matInput placeholder="Name" formControlName='player2'>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Player 3</mat-label>
-          <input matInput placeholder="Name" formControlName='player3'>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Player 4</mat-label>
-          <input matInput placeholder="Name" formControlName='player4'>
-        </mat-form-field>
         <br>
         <br>
         <br>
-        <button mat-raised-button type="submit" color="primary">Let's Play!</button>
+        <button mat-raised-button type="submit" color="basic">Let's Play!</button>
       </form>
   </div>
 </div>

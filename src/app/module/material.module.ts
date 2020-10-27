@@ -6,7 +6,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -17,7 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatOptionModule,
     MatInputModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   exports: [
     MatSelectModule,
@@ -25,7 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatOptionModule,
     MatInputModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ]
 })
 export class MaterialModule { }

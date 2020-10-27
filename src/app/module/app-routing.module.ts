@@ -7,7 +7,7 @@ import { WelcomePageFormComponent } from './../components/welcome-page-form/welc
 const routes: Routes = [
   {path: '', redirectTo: 'welcomePage', pathMatch: 'full'},
   {path: 'welcomePage', component: WelcomePageFormComponent},
-  {path: 'gameOnPage', component: GameOnPageComponentComponent}
+  {path: 'gameOnPage/:id', component: GameOnPageComponentComponent}
 ];
 
 @NgModule({
