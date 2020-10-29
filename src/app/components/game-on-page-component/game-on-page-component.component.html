@@ -1,10 +1,51 @@
+<body>
 <div class="center">
   <h1>{{name}}</h1>
   <img src="{{image}}">
-  <div *ngFor="let yard of frontNineYards">
-    <h1>{{yard}}</h1>
-  </div>
 </div>
+
+<div class="center">
+  <form [formGroup]='form' #playerForm = 'ngForm' (ngSubmit)="addPlayer(playerForm.value.name)" >
+    <h4>Add a player:</h4>
+    <mat-form-field>
+      <mat-label>Player Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <button type="submit">+</button>
+  </form>
+</div>
+
+<div class="overflow">
+  <table>
+    <tbody>
+      <tr id="holes">
+        <td style="background-color: #809D4A">HOLES</td>
+        <td *ngFor="let hole of frontNineHoles">{{hole}}</td>
+        <td style="background-color: #809D4A">OUT</td>
+        <td *ngFor="let hole of backNineHoles">{{hole}}</td>
+        <td style="background-color: #809D4A">IN</td>
+        <td style="background-color: #809D4A">TOTAL</td>
+      </tr>
+      <tr id="yards">
+        <td style="background-color: #809D4A">YARDS</td>
+        <td *ngFor="let fny of frontNineYards">{{fny}}</td>
+        <td style="background-color: #809D4A">{{outYard}}</td>
+        <td *ngFor="let bny of backNineYards">{{bny}}</td>
+        <td style="background-color: #809D4A">{{inYard}}</td>
+        <td style="background-color: #809D4A">{{totalYard}}</td>
+      </tr>
+      <tr>
+        <td style="background-color: #809D4A">PAR</td>
+        <td *ngFor="let fnp of frontNinePar">{{fnp}}</td>
+        <td style="background-color: #809D4A">{{outPar}}</td>
+        <td *ngFor="let bnp of backNinePar">{{bnp}}</td>
+        <td style="background-color: #809D4A">{{inPar}}</td>
+        <td style="background-color: #809D4A">{{totalPar}}</td>
+      </tr>
+    </tbody>
+    </table>
+</div>
+</body>
 
 
 
