@@ -1,3 +1,7 @@
+*, body, div {
+  background-color: burlywood;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
 .center {
   display: flex;
   flex-direction: column;
